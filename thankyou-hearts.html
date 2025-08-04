@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>From Aishwary 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Great+Vibes&family=Quicksand:wght@400;700&family=Sacramento&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #fd0256;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Quicksand', sans-serif;
+      height: 100vh;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 4em;
+      color: #fbf3f7;
+      text-align: center;
+      animation: pop 1s ease-out forwards;
+    }
+
+    .smile {
+      font-size: 5em;
+      margin-top: 20px;
+      animation: bounce 1s infinite alternate;
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff4d6d;
+      font-size: 1.5em;
+      animation: float 4s infinite ease-in;
+    }
+
+    @keyframes float {
+      from { transform: translateY(100vh) rotate(0deg); }
+      to   { transform: translateY(-10vh) rotate(360deg); }
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to   { transform: translateY(-20px); }
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.5); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>LOVE YOU ❤️<br>Rahi</h1>
+  <div class="smile">😊</div>
+
+  <script>
+    for (let i = 0; i < 100; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (1 + Math.random() * 2) + 'em';
+      heart.textContent = '💖';
+      heart.style.animationDuration = (3 + Math.random() * 3) + 's';
+      document.body.appendChild(heart);
+    }
+  </script>
+
+</body>
+</html>
